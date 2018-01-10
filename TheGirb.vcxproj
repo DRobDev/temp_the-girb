@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D6F3CCFA-99F4-44AA-8C48-5148EB735ECC}</ProjectGuid>
+    <RootNamespace>TheGirb</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(WindowsSDK_IncludePath);$(VCInstallDir)include\improved;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VCInstallDir)include\improved;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./;./include/improved;./include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>AIE_1st_Year_Framework_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./libs/</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(PlatformToolsetVersion).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>./;./include/improved;./include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>AIE_1st_Year_Framework.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./libs/</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(PlatformToolsetVersion).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\improved\elements\CollisionSimple.cpp" />
+    <ClCompile Include="source\improved\elements\CollisionSimplePhysics.cpp" />
+    <ClCompile Include="source\improved\gameObjects\PlayerMain.cpp" />
+    <ClCompile Include="source\improved\tools\Collider.cpp" />
+    <ClCompile Include="source\improved\elements\Simple.cpp" />
+    <ClCompile Include="source\improved\elements\SimplePhysics.cpp" />
+    <ClCompile Include="source\SpriteDynamic.cpp" />
+    <ClCompile Include="source\improved\parts\SpriteSimple.cpp" />
+    <ClCompile Include="source\improved\parts\Time.cpp" />
+    <ClCompile Include="source\improved\parts\TransformBase.cpp" />
+    <ClCompile Include="source\improved\parts\TransformDynamic.cpp" />
+    <ClCompile Include="source\improved\TheGirb.cpp" />
+    <ClCompile Include="source\improved\debugging\DebugWindow.cpp" />
+    <ClCompile Include="source\improved\tools\GameObjectsUpdater.cpp" />
+    <ClCompile Include="source\improved\tools\PhysicsUpdater.cpp" />
+    <ClCompile Include="source\improved\tools\Vec2.cpp" />
+    <ClCompile Include="source\improved\elements\Drawer.cpp" />
+    <ClCompile Include="source\improved\tools\Map.cpp" />
+    <ClCompile Include="source\improved\tools\PreDefSprites.cpp" />
+    <ClCompile Include="source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AIE.h" />
+    <ClInclude Include="include\improved\debugging\DebugWindow.h" />
+    <ClInclude Include="include\gameObjects\enemyCharlie.h" />
+    <ClInclude Include="include\improved\elements\CollisionSimple.h" />
+    <ClInclude Include="include\improved\elements\CollisionSimplePhysics.h" />
+    <ClInclude Include="include\improved\elements\Simple.h" />
+    <ClInclude Include="include\improved\elements\SimplePhysics.h" />
+    <ClInclude Include="include\improved\gameObjects\PlayerMain.h" />
+    <ClInclude Include="include\improved\parts\SpriteDynamic.h" />
+    <ClInclude Include="include\improved\parts\SpriteSimple.h" />
+    <ClInclude Include="include\improved\tools\Collider.h" />
+    <ClInclude Include="include\improved\tools\GameObjectsUpdater.h" />
+    <ClInclude Include="include\improved\tools\PhysicsUpdater.h" />
+    <ClInclude Include="include\improved\tools\Time.h" />
+    <ClInclude Include="include\improved\parts\TransformBase.h" />
+    <ClInclude Include="include\improved\parts\TransformDynamic.h" />
+    <ClInclude Include="include\improved\TheGirb.h" />
+    <ClInclude Include="include\improved\tools\Vec2.h" />
+    <ClInclude Include="include\improved\Tools.h" />
+    <ClInclude Include="include\improved\elements\Drawer.h" />
+    <ClInclude Include="include\improved\tools\Map.h" />
+    <ClInclude Include="include\improved\tools\PreDefSprites.h" />
+    <ClInclude Include="include\TheGirb.h" />
+    <ClInclude Include="include\tools\bullet.h" />
+    <ClInclude Include="include\tools\fx.h" />
+    <ClInclude Include="include\tools\animation.h" />
+    <ClInclude Include="include\tools\camera.h" />
+    <ClInclude Include="include\tools\collider.h" />
+    <ClInclude Include="include\tools\enemyBase.h" />
+    <ClInclude Include="include\tools\playerBase.h" />
+    <ClInclude Include="include\gameObjects\playerMain.h" />
+    <ClInclude Include="include\tools\spriteKit.h" />
+    <ClInclude Include="include\tools\transform.h" />
+    <ClInclude Include="include\tools\vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\AIE_1st_Year_Framework.lib" />
+    <Library Include="libs\AIE_1st_Year_Framework_d.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="include\improved\ClassDiagram.cd" />
+    <None Include="PropertySheet.props" />
+    <None Include="resources\fonts\arial.fnt" />
+    <None Include="resources\fonts\invaders.fnt" />
+    <None Include="resources\fonts\Thumbs.db" />
+    <None Include="resources\images\Thumbs.db" />
+    <None Include="resources\shaders\default.fsh" />
+    <None Include="resources\shaders\default.vsh" />
+    <None Include="resources\shaders\default_120.fsh" />
+    <None Include="resources\shaders\default_120.vsh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\fonts\arial_0.png" />
+    <Image Include="resources\fonts\invaders_0.png" />
+    <Image Include="resources\images\background\background_paper.png" />
+    <Image Include="resources\images\cannon.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_idle_1.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_idle_2.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_idle_3.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_move_1.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_move_2.png" />
+    <Image Include="resources\images\charlie\charlie_lvl1_move_3.png" />
+    <Image Include="resources\images\crate_sideup.png" />
+    <Image Include="resources\images\fx\bubble.png" />
+    <Image Include="resources\images\invaders.png" />
+    <Image Include="resources\images\invaders_1_00.png" />
+    <Image Include="resources\images\player\player_lvl1_idle_1.png" />
+    <Image Include="resources\images\player\player_lvl1_idle_2.png" />
+    <Image Include="resources\images\player\player_lvl1_idle_3.png" />
+    <Image Include="resources\images\player\player_lvl1_move_1.png" />
+    <Image Include="resources\images\player\player_lvl1_move_2.png" />
+    <Image Include="resources\images\player\player_lvl1_move_3.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

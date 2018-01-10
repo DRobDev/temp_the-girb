@@ -1,0 +1,12 @@
+//////////////////////////////////////////////
+// Used for translating world position information
+// into screen space
+//////////////////////////////////////////////
+#pragma once
+#include "TheGirb.h"
+
+class Map
+{
+	
+
+};
